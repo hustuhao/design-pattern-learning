@@ -1,0 +1,21 @@
+alerts:
+  - name: High CPU Usage # 接受通知的对象
+    level: critical # 告警级别
+    message: The CPU usage on the server has exceeded 90%. # 告警信息
+    recipients: # 接收者
+        email: # 邮件
+        - admin@example.com
+        - op@example.com
+        sms: # 短信
+        - +1-555-1234
+        - +1-666-1234
+  - name: Low Disk Space
+    level: warning
+    message: The available disk space on the server is less than 10%.
+    recipients:
+        email:
+        - developer@example.com
+        telephone:
+        - 123456
+        pagerduty:
+        - op@oncall
